@@ -57,11 +57,13 @@ def dns_enumeration(domain):
     
     except dns.exception.DNSException as e:
         print(f"[!] Error en la consulta DNS: {e}")
+
+domain = input("Ingrese el sitio que desee enumerar: ")
         
 #Llamadas a las funciones
 
-dns_enumeration('example.com')
-enumerate_subdomains('example.com')
+dns_enumeration(domain)
+enumerate_subdomains(domain)
        
     
         
